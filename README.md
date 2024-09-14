@@ -1,5 +1,5 @@
 # FELanding
-
+- **DEPLOY LINK=  https://fe-landing-khaki.vercel.app/
 # Best Learning Opportunities - Web Page
 
 This project is a responsive webpage built with Bootstrap 5, featuring sections like "Best Learning Opportunities", "Approbable Packages", "Team" carousel, and a newsletter form with validation. It is designed to work on various screen sizes and includes smooth animations and validation for user input.
