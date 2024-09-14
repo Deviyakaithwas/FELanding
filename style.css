@@ -1,0 +1,81 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+    background-color: #F7F1F7;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.packages-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.packages-section h2 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateX(5px); /* Moves the card 5px to the right */
+}
+
+.arrow-right {
+    display: inline-block;
+    margin-left: 5px;
+    transition: margin-left 0.3s ease; /* Smooth transition for the arrow */
+}
+
+.card:hover .arrow-right {
+    margin-left: 10px; /* Moves the arrow 5px to the right on hover */
+}
+
+.team-section {
+    padding: 60px 0;
+    background-color: #F9F9F9;
+}
+
+.team-section h3 {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.newsletter-section {
+    background-color: #FFECEC;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #343A40;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-links a {
+    color: #B0B0B0;
+    text-decoration: none;
+}
+
+.invalid-feedback {
+    display: none; /* Hide by default */
+    color: red;
+}

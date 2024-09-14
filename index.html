@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Learning Opportunities</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar navbar-light bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brandname</a>
+            <div>
+                <a href="#" class="btn btn-outline-primary me-2">Login</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    
+    <section class="hero-section">
+        <div class="container">
+            <h5>WELCOME</h5>
+            <h1>Best Learning Opportunities</h1>
+            <p>Our goal is to make online education work for everyone</p>
+            <a href="#" class="btn btn-success me-3">Join Us</a>
+            <a href="#" class="btn btn-outline-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Approachable Packages Section -->
+    <section class="packages-section">
+        <h5>Team</h5>
+        <div class="container">
+            <h2>Approbable Packages</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h5>Certified Teacher <span class="arrow-right">&rarr;</span></h5>
+                        <p>Certified and professional teachers in various subjects.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h5>Expert Instruction <span class="arrow-right">&rarr;</span></h5>
+                        <p>Access to expert learning materials and tutorials.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <h5>Flexible Timing <span class="arrow-right">&rarr;</span></h5>
+                        <p>Learn at your own pace with flexible timing options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Section -->
+
+    <!-- Team Section with Carousel -->
+<section class="team-section">
+    <div class="container">
+        <h3>Get Quality Education</h3>
+        <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="Screenshot 2024-09-14 150357.png" class="card-img-top" alt="Julian Jameson">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Julian Jameson</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add additional team members here as needed -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="Screenshot 2024-09-14 150407.png" class="card-img-top" alt="Julian Jameson">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Julian Jameson</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="Screenshot 2024-09-14 150414.png" class="card-img-top" alt="Julian Jameson">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Julian Jameson</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="Screenshot 2024-09-14 150423.png" class="card-img-top" alt="Julian Jameson">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Julian Jameson</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Add additional carousel items here -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section with Validation -->
+<section class="newsletter-section">
+    <h5>NEWSLETTER</h5>
+    <div class="container">
+        <h4>Watch our Courses</h4>
+        <p>Subscribe to get the latest updates on courses and offers.</p>
+        <form class="d-flex justify-content-center" id="newsletterForm" novalidate>
+            <input type="email" class="form-control w-50" id="newsletterEmail" placeholder="Your Email" required>
+            <button type="submit" class="btn btn-primary ms-2">Subscribe</button>
+            <div class="invalid-feedback d-none mt-2" style="text-align: left;">Please enter a valid email address.</div>
+        </form>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Newsletter form validation
+    const form = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('newsletterEmail');
+    const feedback = document.querySelector('.invalid-feedback');
+
+    form.addEventListener('submit', function (event) {
+        if (!emailInput.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+            feedback.classList.remove('d-none');
+        } else {
+            feedback.classList.add('d-none');
+        }
+        form.classList.add('was-validated');
+    }, false);
+</script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Company Info</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Features</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Teachers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Get in Touch</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
